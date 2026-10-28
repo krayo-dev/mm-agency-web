@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ==========================================================
+       SEO – názov a popis stránky (zobrazujú sa vo výsledkoch Google)
+       [DOMENA] nahraďte vašou doménou, napr. https://www.mmagency.sk
+       ========================================================== -->
+  <title>Tvorba webstránok a automatizácia pre firmy | MM agency Nitra</title>
+  <meta name="description" content="Weby, ktoré prinášajú dopyty, a automatizácie, ktoré za vás vybavia faktúry, objednávky a e-maily. Pre firmy a živnostníkov z Nitry a celého Slovenska. Konzultácia zdarma, odpoveď do 24 h.">
+  <meta name="author" content="MM agency">
+
+  <!-- ==========================================================
+       BEZPEČNOSŤ – Content Security Policy
+       Povolí len skripty, fonty a obrázky z vlastnej domény
+       a odosielanie formulára na Formspree. Rovnaké pravidlá
+       (plus frame-ancestors) posiela server cez .htaccess / _headers.
+       ========================================================== -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://formspree.io; form-action 'self' https://formspree.io; base-uri 'self'; object-src 'none'; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0A0E14">
+  <link rel="canonical" href="https://[DOMENA]/">
+
+  <!-- Lokálne SEO -->
+  <meta name="geo.region" content="SK-NI">
+  <meta name="geo.placename" content="Nitra">
+
+  <!-- Open Graph (náhľad pri zdieľaní na Facebooku, LinkedIne, WhatsAppe…) -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="sk_SK">
+  <meta property="og:site_name" content="MM agency">
+  <meta property="og:title" content="MM agency – menej rutiny, viac zákaziek">
+  <meta property="og:description" content="Weby, ktoré prinášajú dopyty, a automatizácie, ktoré šetria hodiny práce každý týždeň. Konzultácia zdarma.">
+  <meta property="og:url" content="https://[DOMENA]/">
+  <meta property="og:image" content="https://[DOMENA]/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="MM agency – softvér na mieru, automatizácie a webstránky">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <!-- Fonty: Sora (nadpisy), Inter (text), JetBrains Mono (programátorský štýl).
+       Sú uložené lokálne v assets/fonts – dva najdôležitejšie načítame hneď. -->
+  <link rel="preload" href="assets/fonts/sora-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Zapne animácie len ak beží JavaScript a používateľ nemá vypnutý pohyb.
+       (Samostatný súbor, aby prísna CSP nemusela povoľovať inline skripty.) -->
+  <script src="assets/init.js"></script>
+
+  <!-- Štruktúrované dáta pre Google (LocalBusiness) – doplňte [EMAIL], [TELEFÓN], [DOMENA] -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "MM agency",
+    "description": "Softvér na mieru, automatizácia procesov a tvorba webstránok pre malé a stredné firmy a živnostníkov.",
+    "url": "https://[DOMENA]/",
+    "logo": "https://[DOMENA]/assets/logo.svg",
+    "image": "https://[DOMENA]/assets/og-image.png",
+    "email": "[EMAIL]",
+    "telephone": "[TELEFÓN]",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Nitra",
+      "addressRegion": "Nitriansky kraj",
+      "addressCountry": "SK"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": 48.3069, "longitude": 18.0864 },
+    "areaServed": [
+      { "@type": "City", "name": "Nitra" },
+      { "@type": "Country", "name": "Slovensko" }
+    ],
+    "knowsAbout": ["Tvorba webstránok", "Automatizácia procesov", "Softvér na mieru", "Chatboty", "Integrácie e-shopov"],
+    "priceRange": "€€"
+  }
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#obsah">Preskočiť na obsah</a>
+
+  <!-- ================= NAVIGÁCIA ================= -->
+  <header class="site-header" id="top">
+    <div class="container nav">
+      <a href="#top" class="logo" aria-label="MM agency – na začiatok stránky">
+        <!-- Logo MM agency (pixelový robot) – vložené ako SVG, aby mohlo žmurkať.
+             Originál v plnej kvalite: assets/logo.svg -->
+        <svg class="logo-svg" viewBox="0 0 584 151" aria-hidden="true" focusable="false">
+          <g id="mm-logo-art">
+          <g shape-rendering="crispEdges">
+            <rect x="108" y="0" width="12" height="12" fill="#c6f24e" class="logo-antenna"/><rect x="112" y="12" width="4" height="12" fill="#c6f24e"/>
+            <rect x="0" y="72" width="12" height="36" fill="#c6f24e"/><rect x="216" y="72" width="12" height="36" fill="#c6f24e"/>
+            <rect x="12" y="24" width="204" height="132" fill="#c6f24e"/>
+            <g class="logo-eye"><rect x="48" y="44" width="56" height="56" fill="#0b0e14"/><rect x="56" y="52" width="8" height="40" fill="#c6f24e"/><rect x="88" y="52" width="8" height="40" fill="#c6f24e"/><rect x="64" y="60" width="8" height="8" fill="#c6f24e"/><rect x="80" y="60" width="8" height="8" fill="#c6f24e"/><rect x="72" y="68" width="8" height="8" fill="#c6f24e"/></g>
+            <g class="logo-eye"><rect x="124" y="44" width="56" height="56" fill="#0b0e14"/><rect x="132" y="52" width="8" height="40" fill="#c6f24e"/><rect x="164" y="52" width="8" height="40" fill="#c6f24e"/><rect x="140" y="60" width="8" height="8" fill="#c6f24e"/><rect x="156" y="60" width="8" height="8" fill="#c6f24e"/><rect x="148" y="68" width="8" height="8" fill="#c6f24e"/></g>
+            <rect x="84" y="128" width="12" height="12" fill="#0b0e14"/><rect x="108" y="128" width="12" height="12" fill="#0b0e14"/><rect x="132" y="128" width="12" height="12" fill="#0b0e14"/>
+          </g>
+          <path fill="#e8eaed" d="M271.6 136.8Q264.88 136.8 260.91999999999996 133.0Q256.96 129.2 256.96 123.03999999999999Q256.96 116.8 261.2 113.0Q265.44 109.2 272.48 109.2H284.64V106.0Q284.64 98.4 276.08 98.4Q272.24 98.4 269.92 99.84Q267.6 101.28 267.44 103.84H258.96Q259.36 98.32 263.92 94.75999999999999Q268.48 91.19999999999999 276.16 91.19999999999999Q284.32 91.19999999999999 288.79999999999995 95.08Q293.28 98.96000000000001 293.28 105.92V136.0H284.8V127.76H284.72Q284.16 132.0 280.72 134.4Q277.28 136.8 271.6 136.8ZM274.08 129.68Q278.96 129.68 281.79999999999995 127.32Q284.64 124.96 284.64 120.96V115.28H273.12Q269.68 115.28 267.64 117.28Q265.6 119.28 265.6 122.4Q265.6 125.76 267.84000000000003 127.72Q270.08 129.68 274.08 129.68ZM312.48 150.4V142.96H324.88Q328.48 142.96 330.56 140.96Q332.64 138.96 332.64 135.52V132.24L332.8 124.88Q331.76 128.8 328.68 130.96Q325.6 133.12 321.04 133.12Q314.24 133.12 310.32 128.72Q306.4 124.32 306.4 116.64V107.75999999999999Q306.4 100.16 310.32 95.67999999999999Q314.24 91.19999999999999 321.04 91.19999999999999Q325.6 91.19999999999999 328.64 93.35999999999999Q331.68 95.52 332.72 99.44V92.0H341.2V135.68Q341.2 142.48 336.84000000000003 146.44Q332.48 150.4 324.96 150.4ZM323.84 125.84Q327.92 125.84 330.28 123.32Q332.64 120.8 332.64 116.24V108.24Q332.64 103.75999999999999 330.28 101.24Q327.92 98.72 323.84 98.72Q319.6 98.72 317.32000000000005 101.12Q315.04 103.52 315.04 107.68V116.8Q315.04 121.03999999999999 317.32000000000005 123.44Q319.6 125.84 323.84 125.84ZM372.0 136.8Q363.92 136.8 359.04 132.08Q354.16 127.36 354.16 119.2V108.8Q354.16 100.64 359.04 95.91999999999999Q363.92 91.19999999999999 372.0 91.19999999999999Q377.44 91.19999999999999 381.44 93.32Q385.44 95.44 387.64 99.28Q389.84000000000003 103.12 389.84000000000003 108.24V116.16H362.48V119.75999999999999Q362.48 124.4 365.04 126.96000000000001Q367.6 129.52 372.0 129.52Q375.6 129.52 378.0 128.2Q380.4 126.88 380.88 124.56H389.44Q388.56 130.16 383.8 133.48000000000002Q379.04 136.8 372.0 136.8ZM362.48 108.24V110.08H381.52V108.16Q381.52 103.28 379.03999999999996 100.64Q376.56 98.0 372.0 98.0Q367.44 98.0 364.96000000000004 100.68Q362.48 103.36 362.48 108.24ZM402.72 136.0V92.0H411.28V100.4Q411.92 96.08 415.0 93.63999999999999Q418.08 91.19999999999999 423.04 91.19999999999999Q429.6 91.19999999999999 433.52 95.39999999999999Q437.44 99.6 437.44 106.72V136.0H428.8V108.0Q428.8 103.44 426.48 101.0Q424.16 98.56 420.16 98.56Q416.08 98.56 413.72 101.12Q411.36 103.68 411.36 108.24V136.0ZM468.64 136.8Q460.4 136.8 455.44 132.24Q450.48 127.68 450.48 119.75999999999999V108.24Q450.48 100.32 455.44 95.75999999999999Q460.4 91.19999999999999 468.64 91.19999999999999Q476.64 91.19999999999999 481.44 95.35999999999999Q486.24 99.52 486.56 106.72H478.0Q477.76 102.96000000000001 475.24 100.88Q472.72 98.8 468.64 98.8Q464.24 98.8 461.68 101.24000000000001Q459.12 103.68 459.12 108.16V119.75999999999999Q459.12 124.32 461.68 126.75999999999999Q464.24 129.2 468.64 129.2Q472.8 129.2 475.28 127.11999999999999Q477.76 125.03999999999999 478.0 121.2H486.56Q486.24 128.4 481.44 132.60000000000002Q476.64 136.8 468.64 136.8ZM505.68 150.4 512.08 133.44 495.6 92.0H504.8L514.16 116.8Q514.88 118.56 515.52 120.64Q516.16 122.72 516.4 124.32Q516.72 122.72 517.3199999999999 120.64Q517.92 118.56 518.56 116.8L527.28 92.0H536.4L514.72 150.4Z"/>
+          </g>
+          <rect class="logo-cursor" x="546" y="79" width="38" height="57" fill="#c6f24e"/>
+        </svg>
+      </a>
+
+      <nav aria-label="Hlavná navigácia">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
+          <span class="sr-only">Otvoriť menu</span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+        </button>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#sluzby" class="nav-link">Služby</a></li>
+          <li><a href="#kalkulacka" class="nav-link">Kalkulačka</a></li>
+          <li><a href="#proces" class="nav-link">Ako to funguje</a></li>
+          <li><a href="#ukazky" class="nav-link">Ukážky</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+          <li class="nav-cta-item"><a href="#kontakt" class="btn btn-primary btn-sm">Konzultácia zdarma</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="obsah">
+
+    <!-- ================= HERO ================= -->
+    <section class="hero" aria-labelledby="hero-title">
+      <canvas class="hero-grid" aria-hidden="true"></canvas>
+      <div class="hero-glow" aria-hidden="true"></div>
+
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="mono-label hero-kicker reveal">
+            <span class="dot" aria-hidden="true"></span> Nitra · celé Slovensko · online
+          </p>
+
+          <h1 id="hero-title" class="hero-title">
+            <span class="sr-only">Menej rutiny. Viac zákaziek.</span>
+            <span class="hero-line" data-scramble aria-hidden="true">Menej rutiny.</span>
+            <span class="hero-line accent-text" data-scramble aria-hidden="true">Viac zákaziek.</span>
+          </h1>
+
+          <p class="hero-rotator mono reveal" aria-hidden="true">
+            <span class="prompt">&gt;</span> automatizujeme:
+            <span class="rotator"><span class="rotator-word" data-words="faktúry|objednávky|e-maily|tabuľky|evidenciu|sklad">faktúry</span></span><span class="caret">▍</span>
+          </p>
+
+          <p class="hero-sub reveal">
+            Postavíme vám <strong>web, ktorý privádza dopyty</strong>, a <strong>automatizácie, ktoré za vás vybavia</strong> faktúry,
+            objednávky a e-maily. Vy získate späť hodiny každý týždeň a venujete sa zákazníkom, nie papierom.
+          </p>
+
+          <div class="hero-actions reveal">
+            <a href="#kontakt" class="btn btn-primary btn-lg" data-magnet>
+              Chcem konzultáciu zdarma
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="#kalkulacka" class="btn btn-ghost btn-lg">Spočítať si úsporu</a>
+          </div>
+
+          <ul class="trust-line reveal" aria-label="Naše sľuby">
+            <li>Odpoveď do 24 hodín</li>
+            <li>Cena vopred a písomne</li>
+            <li>Bez záväzkov</li>
+          </ul>
+
+          <ul class="hero-stats reveal" aria-label="Čo od nás môžete čakať">
+            <li><span class="stat-num mono"><span data-count="24">24</span>&nbsp;h</span><span class="stat-label">odpoveď na každý dopyt</span></li>
+            <li><span class="stat-num mono"><span data-count="0" data-from="99">0</span>&nbsp;€</span><span class="stat-label">úvodná konzultácia</span></li>
+            <li><span class="stat-num mono">2–4&nbsp;týž.</span><span class="stat-label">prvé výsledky</span></li>
+          </ul>
+        </div>
+
+        <!-- Okno terminálu – ilustrácia automatizácie (dekoratívne) -->
+        <div class="terminal reveal" role="img" aria-label="Ilustrácia: automatizácia za pár sekúnd vygeneruje a odošle 48 faktúr a zosynchronizuje sklad s e-shopom.">
+          <div class="terminal-bar" aria-hidden="true">
+            <span class="t-dot"></span><span class="t-dot"></span><span class="t-dot"></span>
+            <span class="terminal-title mono">mm-agency — automatizacia.sh</span>
+          </div>
+          <pre class="terminal-body mono" aria-hidden="true"><code data-terminal><span class="t-line"><span class="t-prompt">$</span> mm run fakturacia --mesiac=oktober</span>
+<span class="t-line t-muted">→ načítavam objednávky z e-shopu…</span>
+<span class="t-line t-muted">→ generujem faktúry (48)</span>
+<span class="t-line t-ok">✓ hotovo za 3,2 s · odoslané e-mailom</span>
+<span class="t-line"><span class="t-prompt">$</span> mm sync sklad --eshop</span>
+<span class="t-line t-ok">✓ 312 produktov aktualizovaných</span>
+<span class="t-line t-accent">⏱ ušetrený čas dnes: 2 h 40 min</span></code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROBLÉMY („Spoznávate sa?“) =================
+         Predajný princíp: najprv pomenujeme bolesť zákazníka, potom ponúkneme riešenie. -->
+    <section class="section section-tight" id="problemy" aria-labelledby="problemy-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="mono-label reveal">// 01 — spoznávate sa?</p>
+          <h2 id="problemy-title" class="section-title" data-split>Koľko z tohto platí aj pre vás?</h2>
+          <p class="section-lead reveal">Toto počúvame od majiteľov firiem a živnostníkov najčastejšie. Každá z týchto vecí vás stojí hodiny týždenne a peniaze, ktoré nikde nevidno.</p>
+        </header>
+
+        <ul class="pains">
+          <li class="pain reveal"><span class="pain-x mono" aria-hidden="true">✗</span>Večer a cez víkend ešte dorábate faktúry, ponuky a tabuľky.</li>
+          <li class="pain reveal"><span class="pain-x mono" aria-hidden="true">✗</span>Tie isté údaje prepisujete ručne z jedného programu do druhého.</li>
+          <li class="pain reveal"><span class="pain-x mono" aria-hidden="true">✗</span>Telefón zvoní počas práce a zákazníci sa pýtajú stále na to isté.</li>
+          <li class="pain reveal"><span class="pain-x mono" aria-hidden="true">✗</span>Váš web je zastaraný, na mobile sa zle používa a neprináša dopyty.</li>
+          <li class="pain reveal"><span class="pain-x mono" aria-hidden="true">✗</span>Na Google vás nenájdu, takže zákazky berie konkurencia.</li>
+          <li class="pain reveal"><span class="pain-x mono" aria-hidden="true">✗</span>Chyby pri ručnom prepisovaní stoja peniaze aj nervy.</li>
+        </ul>
+
+        <p class="pains-answer reveal">
+          <span class="accent-text">Dobrá správa:</span> všetko z toho sa dá vyriešiť. Zvyčajne rýchlejšie a lacnejšie, než čakáte.
+          <a href="#kontakt" class="link-arrow">Povedzte nám, čo vás brzdí →</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= SLUŽBY ================= -->
+    <section class="section section-alt" id="sluzby" aria-labelledby="sluzby-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="mono-label reveal">// 02 — služby</p>
+          <h2 id="sluzby-title" class="section-title" data-split>Čo pre vás urobíme</h2>
+          <p class="section-lead reveal">Tri služby, jeden cieľ: viac zákazníkov, menej ručnej práce a firma, ktorá funguje aj keď nie ste pri počítači.</p>
+        </header>
+
+        <div class="cards-3">
+          <article class="card spotlight reveal">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 9h20M6 6.5h.01M9 6.5h.01"/></svg>
+            </div>
+            <p class="card-tag mono">web.launch()</p>
+            <h3>Webstránky, ktoré predávajú</h3>
+            <p>Nie vizitka, ktorú nikto nečíta. Web postavený tak, aby z návštevníka urobil zákazníka: rýchly, jasný a dobre nájditeľný na Google.</p>
+            <ul class="card-list">
+              <li>Firemné weby a landing page zamerané na dopyty</li>
+              <li>Online rezervácie a objednávkové formuláre</li>
+              <li>Lokálne SEO, aby vás našli zákazníci z okolia</li>
+            </ul>
+            <p class="card-for"><span class="mono">pre koho:</span> remeselníci, služby, ambulancie, salóny, malé e-shopy</p>
+            <a href="#kontakt" class="card-cta" data-service="web">Chcem nový web <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="card spotlight reveal">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg>
+            </div>
+            <p class="card-tag mono">automate.run()</p>
+            <h3>Automatizácie</h3>
+            <p>Úlohy, ktoré sa opakujú každý deň, prenecháme systému. Pracuje rýchlo, bez chýb, aj v noci a cez víkend.</p>
+            <ul class="card-list">
+              <li>Faktúry, ktoré sa vytvoria a odošlú samy</li>
+              <li>E-shop prepojený so skladom a účtovníctvom</li>
+              <li>AI chatbot, ktorý odpovedá zákazníkom 24/7</li>
+            </ul>
+            <p class="card-for"><span class="mono">pre koho:</span> firmy, ktoré trávia hodiny v tabuľkách a e-mailoch</p>
+            <a href="#kontakt" class="card-cta" data-service="automatizacia">Chcem ušetriť čas <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="card spotlight reveal">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 10l-2 2 2 2M16 10l2 2-2 2M13 9l-2 6"/></svg>
+            </div>
+            <p class="card-tag mono">software.custom()</p>
+            <h3>Softvér na mieru</h3>
+            <p>Krabicové programy vás nútia prispôsobiť sa im. My postavíme systém, ktorý sa prispôsobí vám a rastie spolu s firmou.</p>
+            <ul class="card-list">
+              <li>Interný systém na objednávky a zákazky</li>
+              <li>Evidencia skladu, dochádzky alebo vozidiel</li>
+              <li>Klientsky portál s prehľadom stavu zákaziek</li>
+            </ul>
+            <p class="card-for"><span class="mono">pre koho:</span> firmy, ktorým už nestačí Excel a e-mail</p>
+            <a href="#kontakt" class="card-cta" data-service="softver">Chcem systém na mieru <span aria-hidden="true">→</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= KALKULAČKA ÚSPORY =================
+         Interaktívny prvok (podobne ako kvíz na leanabs.sk od Grew Studio):
+         návštevník si sám spočíta, koľko ho stojí rutina, a tým sa „predá“ sám. -->
+    <section class="section" id="kalkulacka" aria-labelledby="kalk-title">
+      <div class="container">
+        <div class="calc">
+          <div class="calc-copy">
+            <p class="mono-label reveal">// 03 — kalkulačka</p>
+            <h2 id="kalk-title" class="section-title" data-split>Koľko vás stojí ručná práca?</h2>
+            <p class="section-lead reveal">Posuňte jazdce podľa vašej firmy. Za pár sekúnd uvidíte, koľko hodín a eur ročne vás stojí rutina, ktorú by mohol robiť systém.</p>
+
+            <form class="calc-form reveal" id="calc" aria-label="Kalkulačka úspory času">
+              <div class="calc-field">
+                <label for="c-hours">Hodiny rutiny týždenne na jedného človeka</label>
+                <output for="c-hours" class="calc-val mono" id="c-hours-out">8 h</output>
+                <input id="c-hours" type="range" min="1" max="30" step="1" value="8">
+              </div>
+              <div class="calc-field">
+                <label for="c-people">Koľko ľudí to robí</label>
+                <output for="c-people" class="calc-val mono" id="c-people-out">2</output>
+                <input id="c-people" type="range" min="1" max="20" step="1" value="2">
+              </div>
+              <div class="calc-field">
+                <label for="c-rate">Cena jednej hodiny práce (vrátane odvodov)</label>
+                <output for="c-rate" class="calc-val mono" id="c-rate-out">18 €</output>
+                <input id="c-rate" type="range" min="8" max="60" step="1" value="18">
+              </div>
+            </form>
+          </div>
+
+          <div class="calc-result reveal" aria-live="polite">
+            <p class="calc-label mono">rutina vás ročne stojí</p>
+            <p class="calc-big mono"><span id="c-cost">13 248</span>&nbsp;€</p>
+            <p class="calc-sub"><span id="c-hours-year">736</span> hodín ročne, čo je približne <span id="c-days">92</span> pracovných dní.</p>
+            <div class="calc-save">
+              <p class="calc-label mono">ak zautomatizujeme 60 % z toho</p>
+              <p class="calc-mid mono">ušetríte ~<span id="c-save">7 949</span>&nbsp;€ ročne</p>
+            </div>
+            <a href="#kontakt" class="btn btn-primary btn-lg btn-block" id="calc-cta" data-magnet>
+              Chcem presný výpočet zdarma
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <p class="calc-note">Orientačný výpočet: 46 pracovných týždňov v roku. Koľko presne sa dá zautomatizovať, zistíme na konzultácii.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= AKO TO FUNGUJE ================= -->
+    <section class="section section-alt" id="proces" aria-labelledby="proces-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="mono-label reveal">// 04 — proces</p>
+          <h2 id="proces-title" class="section-title" data-split>Od prvého hovoru k hotovému riešeniu</h2>
+          <p class="section-lead reveal">Žiadne zložité zmluvy ani technické prednášky. Štyri jasné kroky a v každom presne viete, na čom ste a koľko to stojí.</p>
+        </header>
+
+        <div class="steps-wrap">
+        <div class="steps-track" aria-hidden="true"><span class="steps-progress"></span></div>
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step-fn mono">step_01()</span>
+            <span class="step-num mono" aria-hidden="true">01</span>
+            <h3>Konzultácia zdarma</h3>
+            <p>30 minút osobne v Nitre alebo online. Zistíme, kde strácate čas a zákazníkov, a hneď vám povieme, čo sa dá zlepšiť. Nezáväzne.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-fn mono">step_02()</span>
+            <span class="step-num mono" aria-hidden="true">02</span>
+            <h3>Návrh s pevnou cenou</h3>
+            <p>Do pár dní dostanete konkrétny plán s cenou a termínom. Písomne a bez skrytých poplatkov. Rozhodnete sa až potom.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-fn mono">step_03()</span>
+            <span class="step-num mono" aria-hidden="true">03</span>
+            <h3>Realizácia</h3>
+            <p>Riešenie postavíme, otestujeme na vašich reálnych dátach a zaučíme vás. Priebežne vidíte výsledky, takže vás nič neprekvapí.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-fn mono">step_04()</span>
+            <span class="step-num mono" aria-hidden="true">04</span>
+            <h3>Podpora</h3>
+            <p>Po spustení nezmizneme. Staráme sa o chod, opravy aj vylepšenia. Keď vaša firma rastie, riešenie rastie s ňou.</p>
+          </li>
+        </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PREČO MY ================= -->
+    <section class="section" id="preco-my" aria-labelledby="preco-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="mono-label reveal">// 05 — prečo my</p>
+          <h2 id="preco-title" class="section-title" data-split>Prečo spolupracovať s nami</h2>
+          <p class="section-lead reveal">Pracujete priamo s ľuďmi, ktorí vaše riešenie stavajú. Bez sprostredkovateľov a bez technických rečí.</p>
+        </header>
+
+        <div class="cards-4">
+          <article class="feature reveal">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+            </div>
+            <h3>Sme z Nitry</h3>
+            <p>Radi sa stretneme osobne pri káve. Pracujeme však po celom Slovensku a všetko vieme vybaviť aj online.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4.5a3.5 3.5 0 0 1 0 7M18.5 14.5A6.5 6.5 0 0 1 21.5 20"/></svg>
+            </div>
+            <h3>Osobný prístup</h3>
+            <p>Komunikujete priamo s ľuďmi, ktorí vaše riešenie robia. Žiadne call centrá ani prehadzovanie medzi oddeleniami.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9 2h6"/></svg>
+            </div>
+            <h3>Rýchle dodanie</h3>
+            <p>Prvé výsledky vidíte zvyčajne do pár týždňov. Začíname tým, čo vám prinesie najväčší úžitok najskôr.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8M15 7h6v6"/></svg>
+            </div>
+            <h3>Merateľný prínos</h3>
+            <p>Nerobíme technológie pre technológie. Každé riešenie musí ušetriť čas, znížiť chyby alebo priniesť zákazníkov.</p>
+          </article>
+        </div>
+
+        <!-- Záruky – znižujú riziko pre zákazníka. UPRAVTE podľa toho, čo naozaj garantujete. -->
+        <ul class="guarantees reveal" aria-label="Naše záruky">
+          <li>
+            <span class="g-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z"/></svg></span>
+            <span><strong>Cena vopred a písomne</strong>Dohodnutú sumu nenavýšime. Ak sa niečo zmení, najprv sa spýtame.</span>
+          </li>
+          <li>
+            <span class="g-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
+            <span><strong>Riešenie a dáta sú vaše</strong>Žiadne uzamknutie u nás. Prístupy, kód aj dáta patria vám.</span>
+          </li>
+          <li>
+            <span class="g-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 14-5.3M20 12a8 8 0 0 1-14 5.3"/><path d="M18 3v4h-4M6 21v-4h4"/></svg></span>
+            <span><strong>Po spustení nezmizneme</strong>Opravy, úpravy aj rady. Keď firma rastie, riešenie rastie s ňou.</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= UKÁŽKY / PRÍPADOVÉ ŠTÚDIE =================
+         POZOR: Toto sú ukážkové (vymyslené) scenáre.
+         Nahraďte ich skutočnými projektmi, keď ich budete mať. -->
+    <section class="section section-alt" id="ukazky" aria-labelledby="ukazky-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="mono-label reveal">// 06 — ukážky</p>
+          <h2 id="ukazky-title" class="section-title" data-split>Ako môže vyzerať výsledok</h2>
+          <p class="section-lead reveal">Ilustračné scenáre z praxe malých firiem. Ukazujú, aké problémy riešime a aký výsledok môžete čakať.</p>
+        </header>
+
+        <div class="cards-3">
+          <article class="case spotlight reveal">
+            <span class="badge mono">[ UKÁŽKA ]</span>
+            <p class="case-client mono">stavebná firma · 15 zamestnancov</p>
+            <h3>Faktúry z výkazov práce automaticky</h3>
+            <dl class="case-body">
+              <dt>Problém</dt>
+              <dd>Účtovníčka každý mesiac dva dni prepisovala hodiny z tabuliek do faktúr.</dd>
+              <dt>Riešenie</dt>
+              <dd>Jednoduchý formulár na výkazy a automatické generovanie a odoslanie faktúr.</dd>
+            </dl>
+            <p class="case-result"><span class="mono">výsledok:</span> fakturácia za 20 minút namiesto 2 dní</p>
+          </article>
+
+          <article class="case spotlight reveal">
+            <span class="badge mono">[ UKÁŽKA ]</span>
+            <p class="case-client mono">e-shop s kozmetikou</p>
+            <h3>E-shop prepojený so skladom</h3>
+            <dl class="case-body">
+              <dt>Problém</dt>
+              <dd>Zásoby sa odpisovali ručne a zákazníci si objednávali tovar, ktorý už nebol skladom.</dd>
+              <dt>Riešenie</dt>
+              <dd>Prepojenie e-shopu, skladu a účtovníctva. Stav zásob sa aktualizuje sám.</dd>
+            </dl>
+            <p class="case-result"><span class="mono">výsledok:</span> žiadne objednávky tovaru, ktorý chýba</p>
+          </article>
+
+          <article class="case spotlight reveal">
+            <span class="badge mono">[ UKÁŽKA ]</span>
+            <p class="case-client mono">autoservis pri Nitre</p>
+            <h3>Nový web s online rezerváciami</h3>
+            <dl class="case-body">
+              <dt>Problém</dt>
+              <dd>Zastaraný web a telefón, ktorý zvonil počas práce pod autom.</dd>
+              <dt>Riešenie</dt>
+              <dd>Moderný web s rezervačným kalendárom a automatickou SMS pripomienkou termínu.</dd>
+            </dl>
+            <p class="case-result"><span class="mono">výsledok:</span> väčšina termínov sa rezervuje online</p>
+          </article>
+        </div>
+
+        <div class="cta-band reveal">
+          <p><strong>Riešite niečo podobné?</strong> Napíšte nám o tom. Do 24 hodín vám povieme, ako by sme to riešili a koľko by to stálo.</p>
+          <a href="#kontakt" class="btn btn-primary">Opísať môj problém</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FAQ ================= -->
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="container container-narrow">
+        <header class="section-head">
+          <p class="mono-label reveal">// 07 — faq</p>
+          <h2 id="faq-title" class="section-title" data-split>Časté otázky</h2>
+        </header>
+
+        <!-- Pri zmene otázok upravte aj FAQPage JSON-LD na konci stránky (Google z neho robí rozbaľovacie odpovede vo výsledkoch). -->
+        <div class="faq-list">
+          <details class="faq reveal">
+            <summary>Koľko to stojí?</summary>
+            <div class="faq-answer"><p>Každé riešenie je iné, preto cenu stanovíme po krátkej konzultácii. Vždy ju poznáte vopred a písomne, bez skrytých poplatkov. Často sa investícia vráti už za pár mesiacov vďaka ušetrenému času.</p></div>
+          </details>
+          <details class="faq reveal">
+            <summary>Oplatí sa to aj pre živnostníka alebo malú firmu?</summary>
+            <div class="faq-answer"><p>Práve tam je efekt najväčší. Keď každú hodinu robíte sami, každá ušetrená hodina je vaša. Začať sa dá aj malou automatizáciou alebo jednoduchým webom a pridávať postupne.</p></div>
+          </details>
+          <details class="faq reveal">
+            <summary>Čo ak výsledok nebude podľa mojich predstáv?</summary>
+            <div class="faq-answer"><p>Preto vám priebežne ukazujeme rozpracované riešenie a úpravy robíme už počas práce, nie až na konci. Projekt odovzdáme, až keď s ním ste spokojní.</p></div>
+          </details>
+          <details class="faq reveal">
+            <summary>Ako dlho trvá realizácia?</summary>
+            <div class="faq-answer"><p>Jednoduchý web alebo menšiu automatizáciu zvládneme zvyčajne za 2 až 4 týždne. Rozsiahlejší softvér na mieru za niekoľko týždňov až mesiacov. Presný termín dostanete spolu s návrhom riešenia.</p></div>
+          </details>
+          <details class="faq reveal">
+            <summary>Potrebujem technické znalosti?</summary>
+            <div class="faq-answer"><p>Vôbec nie. Stačí, ak nám poviete, ako dnes pracujete a čo vás zdržuje. Technickú časť vyriešime my a riešenie vám vysvetlíme ľudskou rečou.</p></div>
+          </details>
+          <details class="faq reveal">
+            <summary>Čo ak budem po dodaní potrebovať pomoc alebo zmenu?</summary>
+            <div class="faq-answer"><p>Sme tu pre vás aj po spustení. Ponúkame podporu, opravy aj ďalšie vylepšenia. Podľa potreby jednorazovo alebo formou mesačnej starostlivosti.</p></div>
+          </details>
+          <details class="faq reveal">
+            <summary>Dá sa riešenie prepojiť s programami, ktoré už používam?</summary>
+            <div class="faq-answer"><p>Vo väčšine prípadov áno. Bežne prepájame e-shopy, fakturačné a účtovné programy, tabuľky, e-mail či CRM. Na konzultácii overíme, čo presne sa dá.</p></div>
+          </details>
+          <details class="faq reveal">
+            <summary>Pracujete len s firmami z Nitry?</summary>
+            <div class="faq-answer"><p>Nie. Sme z Nitry a radi sa stretneme osobne, ale pracujeme pre klientov z celého Slovenska. Konzultácie aj spoluprácu vieme pohodlne zvládnuť online.</p></div>
+          </details>
+          <details class="faq reveal">
+            <summary>Komu patrí hotové riešenie?</summary>
+            <div class="faq-answer"><p>Vám. Dostanete všetky prístupy a vaše dáta zostávajú vaše. Ak by ste sa niekedy rozhodli pokračovať s niekým iným, nič vám v tom nebráni.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= KONTAKT ================= -->
+    <section class="section section-alt" id="kontakt" aria-labelledby="kontakt-title">
+      <div class="container contact">
+        <div class="contact-info">
+          <p class="mono-label reveal">// 08 — kontakt</p>
+          <h2 id="kontakt-title" class="section-title" data-split>Poďme vám ušetriť čas</h2>
+          <p class="section-lead reveal">Napíšte nám, čo vás brzdí, alebo si nechajte zavolať. Do 24 hodín sa ozveme a dohodneme si 30-minútovú konzultáciu zdarma.</p>
+
+          <ol class="next-steps reveal" aria-label="Čo sa stane po odoslaní">
+            <li><span class="mono">1</span>Do 24 h sa vám ozveme e-mailom alebo telefonicky.</li>
+            <li><span class="mono">2</span>Na krátkom hovore prejdeme, čo potrebujete.</li>
+            <li><span class="mono">3</span>Pošleme návrh s cenou. Rozhodnete sa bez tlaku.</li>
+          </ol>
+
+          <ul class="contact-list reveal">
+            <li>
+              <span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
+              <span><span class="contact-label mono">e-mail</span><a href="mailto:[EMAIL]">[EMAIL]</a></span>
+            </li>
+            <li>
+              <span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg></span>
+              <span><span class="contact-label mono">telefón</span><a href="tel:[TELEFÓN]">[TELEFÓN]</a></span>
+            </li>
+            <li>
+              <span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
+              <span><span class="contact-label mono">mesto</span>Nitra, Slovensko · pôsobíme aj online</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- ==========================================================
+             KONTAKTNÝ FORMULÁR – Formspree
+             1. Zaregistrujte sa zadarmo na https://formspree.io
+             2. Vytvorte nový formulár a skopírujte jeho ID (napr. "xyzabcd")
+             3. Nahraďte [FORMSPREE_ID] nižšie, výsledok bude napr.
+                action="https://formspree.io/f/xyzabcd"
+             ========================================================== -->
+        <form class="contact-form reveal" id="contact-form" action="https://formspree.io/f/[FORMSPREE_ID]" method="POST" novalidate>
+          <!-- Kvalifikácia dopytu: hneď viete, o čo má zákazník záujem -->
+          <fieldset class="field chips-field">
+            <legend>Čo potrebujete?</legend>
+            <div class="chips">
+              <label class="chip"><input type="radio" name="sluzba" value="Webstránka"><span>Webstránku</span></label>
+              <label class="chip"><input type="radio" name="sluzba" value="Automatizácia"><span>Automatizáciu</span></label>
+              <label class="chip"><input type="radio" name="sluzba" value="Softvér na mieru"><span>Softvér na mieru</span></label>
+              <label class="chip"><input type="radio" name="sluzba" value="Ešte neviem" checked><span>Ešte neviem</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="field chips-field">
+            <legend>Ako vás máme kontaktovať?</legend>
+            <div class="chips">
+              <label class="chip"><input type="radio" name="kontakt_cez" value="E-mail" checked><span>Napíšte mi</span></label>
+              <label class="chip"><input type="radio" name="kontakt_cez" value="Telefón"><span>Zavolajte mi</span></label>
+            </div>
+          </fieldset>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="f-name">Meno a priezvisko <span class="req" aria-hidden="true">*</span></label>
+              <input id="f-name" name="meno" type="text" autocomplete="name" required minlength="2" maxlength="80" aria-describedby="f-name-err">
+              <p class="field-error" id="f-name-err" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="f-email">E-mail <span class="req" aria-hidden="true">*</span></label>
+              <input id="f-email" name="email" type="email" autocomplete="email" required maxlength="120" aria-describedby="f-email-err">
+              <p class="field-error" id="f-email-err" aria-live="polite"></p>
+            </div>
+          </div>
+          <div class="field">
+            <label for="f-phone">Telefón <span class="optional" id="f-phone-opt">(nepovinné)</span></label>
+            <input id="f-phone" name="telefon" type="tel" autocomplete="tel" inputmode="tel" maxlength="20" placeholder="+421 9xx xxx xxx" aria-describedby="f-phone-err">
+            <p class="field-error" id="f-phone-err" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label for="f-msg">Čo vás najviac zdržuje? <span class="req" aria-hidden="true">*</span></label>
+            <textarea id="f-msg" name="sprava" rows="5" required minlength="10" maxlength="3000" placeholder="Napr. každý mesiac ručne prepisujeme objednávky do faktúr…" aria-describedby="f-msg-err"></textarea>
+            <p class="field-error" id="f-msg-err" aria-live="polite"></p>
+          </div>
+
+          <!-- Ochrana proti spamu: skryté pole (ľudia ho nevyplnia) + kontrola, či formulár nevyplnil robot za 2 sekundy -->
+          <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <input type="hidden" name="_subject" value="Nový dopyt z webu MM agency">
+
+          <div class="field field-check">
+            <input id="f-gdpr" name="suhlas" type="checkbox" required aria-describedby="f-gdpr-err">
+            <label for="f-gdpr">Súhlasím so <a href="ochrana-osobnych-udajov.html">spracovaním osobných údajov</a> za účelom odpovede na môj dopyt. <span class="req" aria-hidden="true">*</span></label>
+            <p class="field-error" id="f-gdpr-err" aria-live="polite"></p>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg btn-block" data-magnet>
+            <span class="btn-text">Chcem konzultáciu zdarma</span>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+          <p class="form-note">Nezáväzné. Žiadny spam, váš e-mail použijeme len na odpoveď.</p>
+          <p class="form-status mono" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= PÄTIČKA ================= -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#top" class="logo" aria-label="MM agency – na začiatok stránky">
+          <svg class="logo-svg" viewBox="0 0 584 151" aria-hidden="true" focusable="false">
+            <use href="#mm-logo-art"/>
+            <rect x="546" y="79" width="38" height="57" fill="#c6f24e"/>
+          </svg>
+        </a>
+        <p>Webstránky, automatizácie a softvér na mieru z Nitry. Menej rutiny, viac zákaziek.</p>
+        <a href="#kontakt" class="btn btn-primary btn-sm footer-cta">Konzultácia zdarma</a>
+      </div>
+      <div class="footer-col">
+        <h3 class="footer-title mono">služby</h3>
+        <ul>
+          <li><a href="#sluzby">Tvorba webstránok</a></li>
+          <li><a href="#sluzby">Automatizácia procesov</a></li>
+          <li><a href="#sluzby">Softvér na mieru</a></li>
+          <li><a href="#kalkulacka">Kalkulačka úspory</a></li>
+        </ul>
+      </div>
+      <nav class="footer-col" aria-label="Rýchle odkazy">
+        <h3 class="footer-title mono">navigácia</h3>
+        <ul>
+          <li><a href="#sluzby">Služby</a></li>
+          <li><a href="#proces">Ako to funguje</a></li>
+          <li><a href="#ukazky">Ukážky</a></li>
+          <li><a href="#faq">Časté otázky</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
+      <div class="footer-col">
+        <h3 class="footer-title mono">kontakt</h3>
+        <ul>
+          <li><a href="mailto:[EMAIL]">[EMAIL]</a></li>
+          <li><a href="tel:[TELEFÓN]">[TELEFÓN]</a></li>
+          <li>Nitra, Slovensko</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span data-year>2026</span> MM agency. Všetky práva vyhradené.</p>
+      <a href="ochrana-osobnych-udajov.html">Ochrana osobných údajov</a>
+    </div>
+  </footer>
+
+  <!-- Plávajúce tlačidlo na mobile – zobrazí sa po odscrollovaní z úvodu -->
+  <a href="#kontakt" class="sticky-cta" aria-hidden="true" tabindex="-1">Konzultácia zdarma <span aria-hidden="true">→</span></a>
+
+  <!-- Štruktúrované dáta FAQ pre Google – texty musia sedieť s otázkami vyššie -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Koľko to stojí?", "acceptedAnswer": { "@type": "Answer", "text": "Každé riešenie je iné, preto cenu stanovíme po krátkej konzultácii. Vždy ju poznáte vopred a písomne, bez skrytých poplatkov. Často sa investícia vráti už za pár mesiacov vďaka ušetrenému času." } },
+      { "@type": "Question", "name": "Oplatí sa to aj pre živnostníka alebo malú firmu?", "acceptedAnswer": { "@type": "Answer", "text": "Práve tam je efekt najväčší. Keď každú hodinu robíte sami, každá ušetrená hodina je vaša. Začať sa dá aj malou automatizáciou alebo jednoduchým webom a pridávať postupne." } },
+      { "@type": "Question", "name": "Čo ak výsledok nebude podľa mojich predstáv?", "acceptedAnswer": { "@type": "Answer", "text": "Preto vám priebežne ukazujeme rozpracované riešenie a úpravy robíme už počas práce, nie až na konci. Projekt odovzdáme, až keď s ním ste spokojní." } },
+      { "@type": "Question", "name": "Ako dlho trvá realizácia?", "acceptedAnswer": { "@type": "Answer", "text": "Jednoduchý web alebo menšiu automatizáciu zvládneme zvyčajne za 2 až 4 týždne. Rozsiahlejší softvér na mieru za niekoľko týždňov až mesiacov. Presný termín dostanete spolu s návrhom riešenia." } },
+      { "@type": "Question", "name": "Potrebujem technické znalosti?", "acceptedAnswer": { "@type": "Answer", "text": "Vôbec nie. Stačí, ak nám poviete, ako dnes pracujete a čo vás zdržuje. Technickú časť vyriešime my a riešenie vám vysvetlíme ľudskou rečou." } },
+      { "@type": "Question", "name": "Čo ak budem po dodaní potrebovať pomoc alebo zmenu?", "acceptedAnswer": { "@type": "Answer", "text": "Sme tu pre vás aj po spustení. Ponúkame podporu, opravy aj ďalšie vylepšenia. Podľa potreby jednorazovo alebo formou mesačnej starostlivosti." } },
+      { "@type": "Question", "name": "Dá sa riešenie prepojiť s programami, ktoré už používam?", "acceptedAnswer": { "@type": "Answer", "text": "Vo väčšine prípadov áno. Bežne prepájame e-shopy, fakturačné a účtovné programy, tabuľky, e-mail či CRM. Na konzultácii overíme, čo presne sa dá." } },
+      { "@type": "Question", "name": "Pracujete len s firmami z Nitry?", "acceptedAnswer": { "@type": "Answer", "text": "Nie. Sme z Nitry a radi sa stretneme osobne, ale pracujeme pre klientov z celého Slovenska. Konzultácie aj spoluprácu vieme pohodlne zvládnuť online." } },
+      { "@type": "Question", "name": "Komu patrí hotové riešenie?", "acceptedAnswer": { "@type": "Answer", "text": "Vám. Dostanete všetky prístupy a vaše dáta zostávajú vaše. Ak by ste sa niekedy rozhodli pokračovať s niekým iným, nič vám v tom nebráni." } }
+    ]
+  }
+  </script>
+
+  <!-- Knižnice: GSAP (animácie) a Lenis (plynulý scroll) – uložené lokálne v assets/vendor,
+       bez závislosti od cudzieho CDN. Web funguje aj bez nich. -->
+  <script src="assets/vendor/gsap.min.js" defer></script>
+  <script src="assets/vendor/ScrollTrigger.min.js" defer></script>
+  <script src="assets/vendor/SplitText.min.js" defer></script>
+  <script src="assets/vendor/lenis.min.js" defer></script>
+  <script src="script.js" defer></script>
+</body>
+</html>

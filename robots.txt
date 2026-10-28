@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# [DOMENA] nahraďte vašou doménou, napr. https://www.mmagency.sk
+Sitemap: https://[DOMENA]/sitemap.xml

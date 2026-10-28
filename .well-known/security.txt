@@ -1,0 +1,6 @@
+# Kontakt pre nahlásenie bezpečnostných chýb (štandard RFC 9116)
+# Doplňte [EMAIL] a [DOMENA]; dátum Expires obnovte raz ročne.
+Contact: mailto:[EMAIL]
+Expires: 2027-10-28T00:00:00.000Z
+Preferred-Languages: sk, en
+Canonical: https://[DOMENA]/.well-known/security.txt

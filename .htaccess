@@ -1,0 +1,66 @@
+# ==========================================================================
+#  MM agency – nastavenie servera Apache (Websupport, WebHouse, Active24 …)
+#  Súbor nahrajte do koreňového priečinka webu spolu s index.html.
+# ==========================================================================
+
+# Bez výpisu obsahu priečinkov
+Options -Indexes
+
+# Vlastná stránka 404
+ErrorDocument 404 /404.html
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Vždy HTTPS
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # Zablokovať skryté súbory a priečinky (.git, .claude, .env …), okrem .well-known
+  RewriteRule "(^|/)\.(?!well-known/)" - [F]
+</IfModule>
+
+<IfModule mod_headers.c>
+  # Prehliadač bude web otvárať len cez HTTPS (1 rok)
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+
+  # Content Security Policy – povolené sú len vlastné súbory a odosielanie formulára na Formspree
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://formspree.io; form-action 'self' https://formspree.io; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; upgrade-insecure-requests"
+
+  # Ochrana proti vloženiu webu do cudzieho rámu (clickjacking)
+  Header always set X-Frame-Options "DENY"
+  # Prehliadač nesmie hádať typ súboru
+  Header always set X-Content-Type-Options "nosniff"
+  # Cudzím webom neposielame celú adresu stránky
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  # Web nepotrebuje kameru, mikrofón ani polohu
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()"
+  Header always set Cross-Origin-Opener-Policy "same-origin"
+  Header always set Cross-Origin-Resource-Policy "same-origin"
+
+  # Neprezrádzať verziu servera / PHP
+  Header always unset X-Powered-By
+  Header unset X-Powered-By
+
+  # Cache: fonty, obrázky a knižnice na rok, HTML/CSS/JS kratšie (aby sa zmeny prejavili)
+  <FilesMatch "\.(woff2|png|jpg|jpeg|webp|avif|svg|ico)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(css|js)$">
+    Header set Cache-Control "public, max-age=604800"
+  </FilesMatch>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "public, max-age=0, must-revalidate"
+  </FilesMatch>
+</IfModule>
+
+# Kompresia textových súborov
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript text/javascript application/json image/svg+xml text/plain application/xml
+</IfModule>
+
+<IfModule mod_mime.c>
+  AddType font/woff2 .woff2
+  AddType image/svg+xml .svg
+</IfModule>

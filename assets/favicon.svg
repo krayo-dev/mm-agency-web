@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <!-- Ikona MM agency – pixelový robot na tmavom podklade -->
+  <rect width="256" height="256" rx="48" fill="#0b0e14"/>
+  <g transform="translate(14 50)" shape-rendering="crispEdges">
+    <rect x="108" y="0" width="12" height="12" fill="#c6f24e"/><rect x="112" y="12" width="4" height="12" fill="#c6f24e"/>
+    <rect x="0" y="72" width="12" height="36" fill="#c6f24e"/><rect x="216" y="72" width="12" height="36" fill="#c6f24e"/>
+    <rect x="12" y="24" width="204" height="132" fill="#c6f24e"/>
+    <rect x="48" y="44" width="56" height="56" fill="#0b0e14"/><rect x="56" y="52" width="8" height="40" fill="#c6f24e"/><rect x="88" y="52" width="8" height="40" fill="#c6f24e"/><rect x="64" y="60" width="8" height="8" fill="#c6f24e"/><rect x="80" y="60" width="8" height="8" fill="#c6f24e"/><rect x="72" y="68" width="8" height="8" fill="#c6f24e"/>
+    <rect x="124" y="44" width="56" height="56" fill="#0b0e14"/><rect x="132" y="52" width="8" height="40" fill="#c6f24e"/><rect x="164" y="52" width="8" height="40" fill="#c6f24e"/><rect x="140" y="60" width="8" height="8" fill="#c6f24e"/><rect x="156" y="60" width="8" height="8" fill="#c6f24e"/><rect x="148" y="68" width="8" height="8" fill="#c6f24e"/>
+    <rect x="84" y="128" width="12" height="12" fill="#0b0e14"/><rect x="108" y="128" width="12" height="12" fill="#0b0e14"/><rect x="132" y="128" width="12" height="12" fill="#0b0e14"/>
+  </g>
+</svg>
