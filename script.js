@@ -353,7 +353,7 @@
         ctx.fillStyle = 'rgba(198, 242, 78, 0.09)';
         ctx.fillRect(cx, cy, size, size);
       }
-      ctx.strokeStyle = 'rgba(255, 255, 255, 0.055)';
+      ctx.strokeStyle = document.documentElement.dataset.theme === 'light' ? 'rgba(10, 14, 20, 0.07)' : 'rgba(255, 255, 255, 0.055)';
       ctx.lineWidth = 1;
       ctx.beginPath();
       for (let x = -o; x <= w; x += size) { ctx.moveTo(x + 0.5, 0); ctx.lineTo(x + 0.5, h); }
@@ -371,6 +371,7 @@
 
     resize();
     window.addEventListener('resize', resize);
+    window.addEventListener('themechange', draw);
 
     if (finePointer) {
       hero.addEventListener('pointermove', (e) => {
