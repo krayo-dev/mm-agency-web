@@ -30,6 +30,7 @@
   --accent-fg: #C6F24E;       /* akcent použitý ako farba textu */
   --header-bg: rgba(10, 14, 20, .78);
   --header-solid: rgba(10, 14, 20, .97);
+  --logo-glow: rgba(120, 170, 20, .22);
   --danger: #FF7A7A;
   --ok: #7BE495;
 
@@ -63,6 +64,7 @@
   --accent-fg: #4A7A00;
   --header-bg: rgba(246, 247, 242, .8);
   --header-solid: rgba(246, 247, 242, .97);
+  --logo-glow: rgba(90, 135, 0, .16);
   --danger: #C62828;
   --ok: #2E7D32;
   color-scheme: light;
@@ -159,22 +161,40 @@ html.lenis, html.lenis body { height: auto; }
 }
 .nav { height: 100%; display: flex; align-items: center; justify-content: space-between; }
 
-.logo { position: relative; display: inline-flex; align-items: center; }
+.logo { position: relative; isolation: isolate; display: inline-flex; align-items: center; }
+/* Jemná žiara za hlavou robota */
+.logo::before {
+  content: ""; position: absolute; z-index: -1; left: 19.52%; top: 55%; width: 74%; height: 217%;
+  transform: translate(-50%, -50%); border-radius: 50%; pointer-events: none;
+  background: radial-gradient(closest-side, var(--logo-glow), transparent);
+}
 .logo-svg { height: 40px; width: auto; overflow: visible; }
 .logo-cursor { animation: blink 1.1s steps(1) infinite; }
 .logo-word { fill: var(--text); transition: fill .3s var(--ease); }
-/* Oči robota – HTML vrstva presne nad logom (pozície v % z viewBoxu 584 × 151).
-   Robot občas žmurkne */
+/* Oči robota – HTML vrstva presne nad hlavou robota (hlava = 228 × 156 z viewBoxu 584 × 151,
+   pozície očí v % z hlavy). Robot občas žmurkne */
+.logo-eyes { position: absolute; top: 0; left: 0; width: 39.041%; height: 103.311%; transform-origin: 50% 100%; }
+.logo-head { transform-box: fill-box; transform-origin: 50% 100%; }
 .logo-eye {
-  position: absolute; top: 29.139%; left: 8.219%; width: 9.589%; height: 37.086%;
+  position: absolute; top: 28.205%; left: 21.053%; width: 24.561%; height: 35.897%;
   color: #c6f24e; animation: robot-blink 5s infinite; transition: color .3s ease-in-out .2s;
 }
-.logo-eye + .logo-eye { left: 21.233%; animation-delay: .04s; }
-/* Po prejdení myšou sa písmená MM v očiach plynulo preklopia okolo osi X (s perspektívou) a zbelejú */
-.logo:hover .logo-eye { color: #fff; animation: mm-flip .7s cubic-bezier(.45, 0, .2, 1) 1; }
+.logo-eye + .logo-eye { left: 54.386%; animation-delay: .04s; }
+/* Po prejdení myšou sa písmená MM v očiach otočia do strany (okolo osi Y) a zbelejú */
+.logo:hover .logo-eye { color: #fff; animation: mm-spin .7s cubic-bezier(.45, 0, .2, 1) 1; }
 .logo:hover .logo-eye + .logo-eye { animation-delay: .06s; }
+/* …a celá hlava v hlavičke poskočí (SVG hlava aj vrstva očí rovnako, posun v % z výšky hlavy) */
+.site-header .logo:hover .logo-head,
+.site-header .logo:hover .logo-eyes { animation: robot-hop .8s cubic-bezier(.45, 0, .3, 1) 1; }
 @keyframes robot-blink { 0%, 92%, 100% { transform: scaleY(1); } 95% { transform: scaleY(.1); } }
-@keyframes mm-flip { 0% { transform: perspective(45px) rotateX(0); } 100% { transform: perspective(45px) rotateX(360deg); } }
+@keyframes mm-spin { 0% { transform: perspective(45px) rotateY(0); } 100% { transform: perspective(45px) rotateY(360deg); } }
+@keyframes robot-hop {
+  0%, 100% { transform: translateY(0) scale(1, 1); }
+  12% { transform: translateY(0) scale(1.06, .92); }
+  40% { transform: translateY(-12%) scale(.97, 1.04); }
+  70% { transform: translateY(0) scale(1.05, .94); }
+  85% { transform: translateY(-1.5%) scale(1, 1); }
+}
 
 /* Prepínač svetlý/tmavý režim */
 .site-header nav { margin-left: auto; }

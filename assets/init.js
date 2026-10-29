@@ -7,7 +7,7 @@
   if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) c.add('motion');
   setTimeout(function () { if (!c.contains('ready')) c.add('no-anim'); }, 2500);
 
-  // Svetlý / tmavý režim – predvolený je tmavý, voľba sa zapamätá v prehliadači
+  // Svetlý / tmavý režim – predvolený je svetlý, voľba sa zapamätá v prehliadači
   var KEY = 'mm-theme';
   function setTheme(t) {
     root.dataset.theme = t;
@@ -16,7 +16,7 @@
   }
   var saved = null;
   try { saved = localStorage.getItem(KEY); } catch (e) {}
-  setTheme(saved === 'light' ? 'light' : 'dark');
+  setTheme(saved === 'dark' ? 'dark' : 'light');
 
   d.addEventListener('DOMContentLoaded', function () {
     var label = function () { return root.dataset.theme === 'light' ? 'Zapnúť tmavý režim' : 'Zapnúť svetlý režim'; };
